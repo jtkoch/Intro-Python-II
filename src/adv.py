@@ -1,4 +1,5 @@
 from room import Room
+from player import Player
 
 # Declare all the rooms
 
@@ -38,6 +39,18 @@ room['treasure'].s_to = room['narrow']
 #
 
 # Make a new player object that is currently in the 'outside' room.
+player = Player("Jensen", room["outside"])
+
+print(player.name)
+
+user_is_playing = True
+while user_is_playing:
+    print(player.current_room.name)
+    print(player.current_room.description)
+
+    user_input = input("Which direction would you like to go? (N/E/S/W): ")
+
+    user_is_playing = False
 
 # Write a loop that:
 #
